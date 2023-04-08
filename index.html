@@ -2,268 +2,484 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <title>GOOGLEREPAIR | Ремонт телефон GOOGLE</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <title>Ремонт телефоно Ростов-на-Дону</title>
 </head>
 
 <body>
-  <div class="modal" id="modal1">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <h1>Свяжитесь с нами!</h1>
-      <form method="post" class="modal-content-form">
-        <input type="text" required placeholder="Ваше имя">
-        <input type="email" required placeholder="Ваша почта">
-        <textarea style="resize: none;" placeholder="Введите своё сообщение"></textarea>
-        <button type="submit">Отправить</button>
-      </form>
+<div class="container">
+    <div class="modal-window hidden">
+        <button class="close-modal-window">&times;</button>
+        <h1 class="title">Модальное Окно</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vulputate
+            porta volutpat. Mauris tempor egestas fermentum. Donec et tortor in
+            felis pulvinar accumsan quis at massa. Orci varius natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus. Sed fermentum dui
+            sit amet lorem maximus, non feugiat eros semper. Vivamus eget dolor ut
+            libero pharetra ultricies ut elementum nisl. Mauris fringilla feugiat
+            ullamcorper. Nunc id tincidunt orci. Suspendisse eget sapien at turpis
+            rutrum semper sed id diam. Duis scelerisque ligula nisl, vitae viverra
+            nibh venenatis nec. Pellentesque nec nunc arcu. Integer mollis mi ut
+            risus posuere malesuada. Aliquam rhoncus ante vitae sem aliquet, vel
+            elementum ex vulputate. Nulla finibus commodo lacinia.
+        </p>
     </div>
-  </div>
-  <div class="to-up">Наверх</div>
-  <header>
-    <div class="container header__wrapper">
-      <a href="#">
-        <img src="img/logo.svg" alt="Logo" width="46" height="46">
-      </a>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-link">
-            <a href="#sales">Акции</a>
-          </li>
-          <li class="header__nav-link">
-            <a href="#tovar">Товар</a>
-          </li>
-          <li class="header__nav-link">
-            <a href="#category">Категории</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <div class="main__container">
-      <img src="img/bg.svg" alt="Header BG">
-      <div class="container">
-        <div class="main__text">
-          <h1>Ремонт телефонов GOOGLE</h1>
-          <p>Подарки, которые вам нужны, без стресса. Покупайте лучшее в Google с легкостью.</p>
-          <div>
-            <button class="btn__main" data-modal-target="modal1">Узнать больше</button>
-            <button class="btn__second" data-modal-target="modal1">Связаться с нами</button>
-          </div>
+    <div class="overlay hidden"></div>
+    <header>
+        <a href="index.html" class="header__logo">
+            <p>Логотип</p>
+        </a>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-list-item">
+                    <a class="header__nav-item-link" href="#">Ссылка</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a class="header__nav-item-link" href="#">Ссылка</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a class="header__nav-item-link" href="#">Ссылка</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a class="header__nav-item-link" href="#">Ссылка</a>
+                </li>
+            </ul>
+            <a href="tel: 700000000" class="header__phone">
+                <p>+7 000 000-00-00</p>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="main__content">
+            <h1>Мы чиним любые
+                телефоны</h1>
+            <p>Починим Ваш телефон в Ростове-на-Дону</p>
+            <button class="show-modal-window">Позвонить нам</button>
         </div>
-      </div>
-    </div>
-  </main>
-  <div class="container">
-    <section class="sales" id="sales">
-      <h2>Товары по нашей акции</h2>
-      <div id="wrapper">
-        <div id="carousel">
-          <div id="content">
-            <div class="item">
-              <div class="slider__card">
-                <p class="slider__new">New</p>
-                <img src="img/slider/IMAGE-4.svg" alt="Slider Card">
-                <p class="slider__desc">Google Pixel Watch</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="slider__card">
-                <p class="slider__new"></p>
-                <img src="img/slider/IMAGE-2.svg" alt="Slider Card">
-                <p class="slider__desc">Pixel 7 Pro</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="slider__card">
-                <p class="slider__new"></p>
-                <img src="img/slider/IMAGE-1.svg" alt="Slider Card">
-                <p class="slider__desc">Pixel 7</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="slider__card">
-                <p class="slider__new"></p>
-                <img src="img/slider/IMAGE-1.svg" alt="Slider Card">
-                <p class="slider__desc">Pixel 5</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="slider__card">
-                <p class="slider__new">New</p>
-                <img src="img/slider/IMAGE-1.svg" alt="Slider Card">
-                <p class="slider__desc">Pixel 7</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="slider__card">
-                <p class="slider__new"></p>
-                <img src="img/slider/IMAGE.svg" alt="Slider Card">
-                <p class="slider__desc">Google Pixel Watch</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="slider__card">
-                <p class="slider__new"></p>
-                <img src="img/slider/IMAGE.svg" alt="Slider Card">
-                <p class="slider__desc">Google Pixel Watch</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="slider__card">
-                <p class="slider__new"></p>
-                <img src="img/slider/IMAGE-2.svg" alt="Slider Card">
-                <p class="slider__desc">Pixel 7</p>
-              </div>
-            </div>
-
-          </div>
+        <div class="main__image">
+            <img src="./img/MainPic.png" alt="Img Main">
         </div>
-        <button id="prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="none" d="M0 0h24v24H0V0z" />
-            <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-          </svg>
-        </button>
-        <button id="next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="none" d="M0 0h24v24H0V0z" />
-            <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-          </svg>
-        </button>
-      </div>
+    </main>
+    <section class="chooses">
+        <h2>Нас выбирают</h2>
+        <div class="chooses__wrap">
+            <div class="chooses__card">
+                <div class="chooses__card-top">
+                    <img src="./img/choose/img-1.png" alt="Image Card Choose">
+                </div>
+                <div class="chooses__card-bottom">
+                    <p class="chooses__card-bottom-title">Качество и скорость работы</p>
+                    <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+                </div>
+            </div>
+            <div class="chooses__card">
+                <div class="chooses__card-top">
+                    <img src="./img/choose/img-3.png" alt="Image Card Choose">
+                </div>
+                <div class="chooses__card-bottom">
+                    <p class="chooses__card-bottom-title">Доступная стоимость работы</p>
+                    <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+                </div>
+            </div>
+            <div class="chooses__card">
+                <div class="chooses__card-top">
+                    <img src="./img/choose/img-2.png" alt="Image Card Choose">
+                </div>
+                <div class="chooses__card-bottom">
+                    <p class="chooses__card-bottom-title">Гарантия от 3-х месяцев</p>
+                    <p class="chooses__card-bottom-desc">Для клиентов мы предоствляем
+                        гарантию на работу </p>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section class="sale">
-      <div class="sale__img">
-        <img src="img/sale.svg" alt="Sale">
-      </div>
-      <div class="sale__text">
-        <h2>В этот праздничный сезон Google Pixel отдает дань уважения.</h2>
-        <p>Мы вносим 1 миллион долларов в фонд NBA Foundation, чтобы помочь студентам HBCU продвинуться по карьерной
-          лестнице в STEM, спорте и медиаиндустрии.</p>
-        <button class="btn__main" data-modal-target="modal1">Узнать больше</button>
-      </div>
+    <section class="type__fix">
+        <h2>Ремонтируем поломки</h2>
+        <div class="type__fix-wrap">
+            <div class="type__fix-card-1 type__fix-card">
+                <p class="type__fix-card-title">Дисплей и стекло</p>
+                <div class="type__fix-card-content">
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Не работает экран</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Треснуло стекло</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не работает сенсор
+                                или тачскрин</p>
+                        </li>
+                    </ul>
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Нет подсветки экрана</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не работает часть экрана</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Появились полосы</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="type__fix-card-2 type__fix-card">
+                <p class="type__fix-card-title">Зарядка и батарея</p>
+                <div class="type__fix-card-content">
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Быстро разряжается</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Вздулся аккумулятор</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не заряжается</p>
+                        </li>
+                    </ul>
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Плохой контакт зарядки</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Греется во время
+                                зарядки</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="type__fix-card-3 type__fix-card">
+                <p class="type__fix-card-title">Звук и динамики</p>
+                <div class="type__fix-card-content">
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Динамик хрипит</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Динамик не работает</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Динамик тихо работает</p>
+                        </li>
+                    </ul>
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Не работают наушники</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не работает вибро</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="type__fix-card-4 type__fix-card">
+                <p class="type__fix-card-title">Камеры</p>
+                <div class="type__fix-card-content">
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Не фокусирует передняя</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не фокусирует задняя</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не работает фронтальная</p>
+                        </li>
+                    </ul>
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Не работает задняя</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не работает вспышка</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Треснуло стекло камеры</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="type__fix-card-5 type__fix-card">
+                <p class="type__fix-card-title">Кнопки</p>
+                <div class="type__fix-card-content">
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Не работают кнопки</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Ремонт кнопки громкости</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Ремонт кнопки home</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Ремонт кнопки home</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="type__fix-card-6 type__fix-card">
+                <p class="type__fix-card-title">Разговор и микрофон</p>
+                <div class="type__fix-card-content">
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Я не слышу собеседника</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Плохо слышно абонента</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не гаснет при разговоре</p>
+                        </li>
+                    </ul>
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Собеседник не слышит</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Собеседник плохо слышит</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="type__fix-card-7 type__fix-card">
+                <p class="type__fix-card-title">Связь, сеть и WI-FI</p>
+                <div class="type__fix-card-content">
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Не видит SIM карту</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не видит сеть</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Сеть ловит плохо</p>
+                        </li>
+                    </ul>
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Не работает 3G/4G</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не работает Wi-Fi</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="type__fix-card-8 type__fix-card">
+                <p class="type__fix-card-title">Общие проблемы</p>
+                <div class="type__fix-card-content">
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Сильно греется</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Глючит или тормозит</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Разблокировка</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Зависает</p>
+                        </li>
+                    </ul>
+                    <ul class="type__fix-card-list">
+                        <li class="type__fix-card-item">
+                            <p>Не включается</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Не видит карту памяти</p>
+                        </li>
+                        <li class="type__fix-card-item">
+                            <p>Попала вода</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
-
+    <section class="repair__brand">
+        <h3>ремонтируем бренды</h3>
+        <div>
+            <img src="./img/images-brand.png" alt="Image Brand">
+        </div>
+    </section>
+    <section class="slide">
+        <h4>Реальные отзывы</h4>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-slide-top">
+                        <img src="./img/slider/chat.png" alt="Slider Star">
+                        <p>Роман</p>
+                    </div>
+                    <div class="swiper-slide-center">
+                        <p>Договор: <span>345645</span></p>
+                        <p>Дата: <span>21.03.2023</span></p>
+                        <img src="./img/slider/stars.png" alt="Slider Star">
+                    </div>
+                    <div class="swiper-slide-bottom">
+                        <p>Отличная компания! После моего первого звонка, через
+                            сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
+                            Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
+                            за быструю и качественную работу.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-top">
+                        <img src="./img/slider/chat.png" alt="Slider Star">
+                        <p>Роман</p>
+                    </div>
+                    <div class="swiper-slide-center">
+                        <p>Договор: <span>345645</span></p>
+                        <p>Дата: <span>21.03.2023</span></p>
+                        <img src="./img/slider/stars.png" alt="Slider Star">
+                    </div>
+                    <div class="swiper-slide-bottom">
+                        <p>Отличная компания! После моего первого звонка, через
+                            сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
+                            Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
+                            за быструю и качественную работу.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-top">
+                        <img src="./img/slider/chat.png" alt="Slider Star">
+                        <p>Роман</p>
+                    </div>
+                    <div class="swiper-slide-center">
+                        <p>Договор: <span>345645</span></p>
+                        <p>Дата: <span>21.03.2023</span></p>
+                        <img src="./img/slider/stars.png" alt="Slider Star">
+                    </div>
+                    <div class="swiper-slide-bottom">
+                        <p>Отличная компания! После моего первого звонка, через
+                            сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
+                            Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
+                            за быструю и качественную работу.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-top">
+                        <img src="./img/slider/chat.png" alt="Slider Star">
+                        <p>Роман</p>
+                    </div>
+                    <div class="swiper-slide-center">
+                        <p>Договор: <span>345645</span></p>
+                        <p>Дата: <span>21.03.2023</span></p>
+                        <img src="./img/slider/stars.png" alt="Slider Star">
+                    </div>
+                    <div class="swiper-slide-bottom">
+                        <p>Отличная компания! После моего первого звонка, через
+                            сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
+                            Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
+                            за быструю и качественную работу.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
     <section>
-      <div class="angry-grid">
-        <div id="item-0" class="cards__wrapper">
-          <p class="cards__title">Google Pixel Watch</p>
-          <p class="cards__desc">Отлично смотрится на спортсменах</p>
-          <button class="btn__main" data-modal-target="modal1">Узнать больше</button>
-          <img src="img/cards/IMAGE.svg" alt="Card Img">
-        </div>
-        <div id="item-1" class="cards__wrapper">
-          <p class="cards__title">Nest Wifi Pro with Wi-Fi 6E</p>
-          <p class="cards__desc">Слушайте то, что хотите</p>
-          <button class="btn__main" data-modal-target="modal1">Узнать больше</button>
-          <img src="img/cards/IMAGE-1.svg" alt="Card Img">
-        </div>
-        <div id="item-2" class="cards__wrapper">
-          <p class="cards__title">Nest Doorbell (wired)</p>
-          <p class="cards__desc">Узнайте о себе чуть больше</p>
-          <button class="btn__main" data-modal-target="modal1">Узнать больше</button>
-          <img src="img/cards/IMAGE-2.svg" alt="Card Img">
-        </div>
-      </div>
-    </section>
-    <section class="tovar__wrappers" id="category">
-      <h3>Основные категории товары</h3>
-      <div class="tovar">
+        <h5>Актуальные акции</h5>
         <div>
-          <img src="img/tovar/IMAGE.svg" alt="Tovar">
-          <p>Камеры</p>
+            <img src="./img/images-repair.png" alt="Repair banner">
         </div>
-        <div>
-          <img src="img/tovar/IMAGE-1.svg" alt="Tovar">
-          <p>Пульты Управления</p>
-        </div>
-        <div>
-          <img src="img/tovar/IMAGE-2.svg" alt="Tovar">
-          <p>Зарядные Устройства</p>
-        </div>
-        <div>
-          <img src="img/tovar/IMAGE-3.svg" alt="Tovar">
-          <p>Планшеты</p>
-        </div>
-      </div>
-    </section>
-    <section id="tovar">
-      <div class="tovar-grid">
-        <div id="tovar-0" class="tovar__wrapper">
-          <p class="cards__title">Watches</p>
-          <p class="cards__desc">Продолжайте двигаться.</p>
-          <button class="btn__main" data-modal-target="modal1">Узнать больше</button>
-          <img src="img/card/IMAGE.svg" alt="Card Img">
-        </div>
-        <div id="tovar-1" class="tovar__wrapper">
-          <p class="cards__title">Earbuds</p>
-          <p class="cards__desc">Только вы готовы слушать такое звучание</p>
-          <button class="btn__main" data-modal-target="modal1">Узнать больше</button>
-          <img src="img/card/IMAGE-1.svg" alt="Card Img">
-        </div>
-      </div>
     </section>
     <section>
-      <div class="top__footer">
+        <h6>Text</h6>
+        <div class="working__wrap">
+            <div class="working__card">
+                <div class="working__card-top">
+                    <p class="working__card-top-num">1</p>
+                    <p class="working__card-top-text">Звонок</p>
+                </div>
+                <div class="working__card-bottom">
+                    <p class="chooses__card-bottom-desc">Звоните по телефону и оставляете заявку
+                        на ремонт техники</p>
+                </div>
+            </div>
+            <div class="working__card">
+                <div class="working__card-top">
+                    <p class="working__card-top-num">2</p>
+                    <p class="working__card-top-text">Доставка</p>
+                </div>
+                <div class="working__card-bottom">
+                    <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+                </div>
+            </div>
+            <div class="working__card">
+                <div class="working__card-top">
+                    <p class="working__card-top-num">3</p>
+                    <p class="working__card-top-text">Диагностика</p>
+                </div>
+                <div class="working__card-bottom">
+                    <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+                </div>
+            </div>
+        </div>
+        <div class="working__wrap">
+            <div class="working__card-bot">
+                <div class="working__card-bot-top">
+                    <p class="working__card-top-num">4</p>
+                    <p class="working__card-top-text">Согласовывание</p>
+                </div>
+                <div class="working__card-bottom-bot">
+                    <p class="working__card-bot-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30
+                        минут</p>
+                </div>
+            </div>
+            <div class="working__card-bot">
+                <div class="working__card-bot-top">
+                    <p class="working__card-top-num">5</p>
+                    <p class="working__card-top-text">Все уже готово</p>
+                </div>
+                <div class="working__card-bottom-bot">
+                    <p class="working__card-bot-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30
+                        минут</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h6>Text</h6>
         <div>
-          <img src="img/img.svg" alt="Img">
+            <div>
+                Image Card
+            </div>
         </div>
-        <div class="top__footer-text">
-          <h4>Обеспечение устойчивости в работе.</h4>
-          <p>К 2025 году мы стремимся использовать переработанные или возобновляемые материалы во всех продуктах Pixel,
-            Nest и Fitbit.
-          </p>
-          <button class="btn__main" data-modal-target="modal1">Узнать больше</button>
+    </section>
+    <section>
+        <h6>Text</h6>
+        <div>
+            <div>
+                info
+            </div>
+            <div>
+                Map
+            </div>
+            <div>
+                text
+            </div>
         </div>
-      </div>
     </section>
     <footer>
-      <div>
-        <a href="#">
-          <img src="img/footer/Frame-1.svg" alt="Footer link">
-        </a>
-        <a href="#">
-          <img src="img/footer/Frame-2.svg" alt="Footer link">
-        </a>
-        <a href="#">
-          <img src="img/footer/Frame-3.svg" alt="Footer link">
-        </a>
-        <a href="#">
-          <img src="img/footer/Frame-4.svg" alt="Footer link">
-        </a>
-        <a href="#">
-          <img src="img/footer/Frame.svg" alt="Footer link">
-        </a>
-      </div>
-      <div>
-        <p>GOOGLEREPAIR 2023</p>
-      </div>
+        footer
     </footer>
-  </div>
-  <script src="js/slider.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/toup.js"></script>
-  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/slider.js"></script>
+<script src="./js/modal.js"></script>
 </body>
 
 </html>

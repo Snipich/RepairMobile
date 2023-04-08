@@ -1,40 +1,33 @@
-const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
-const modals = document.querySelectorAll(".modal");
-const modalCloseButtons = document.querySelectorAll(".modal-close");
+'use strict';
 
-modalTriggerButtons.forEach(elem => {
-  elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
-});
-modalCloseButtons.forEach(elem => {
-  elem.addEventListener("click", event => toggleModal(event.currentTarget.closest(".modal").id));
-});
-modals.forEach(elem => {
-  elem.addEventListener("click", event => {
-    if(event.currentTarget === event.target) toggleModal(event.currentTarget.id);
-  });
-});
+const modalWindow = document.querySelector('.modal-window');
+const modalOverlay = document.querySelector('.overlay');
+const btnCloseModalWindow = document.querySelector('.close-modal-window');
+const showModalWindow = document.querySelectorAll('.show-modal-window');
 
-// Close Modal with "Esc"...
-document.addEventListener("keydown", event => {
-  if(event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
-    toggleModal(document.querySelector(".modal.modal-show").id);
-  }
-});
-
-function toggleModal(modalId) {
-  const modal = document.getElementById(modalId);
-
-  if(getComputedStyle(modal).display==="flex") { // alternatively: if(modal.classList.contains("modal-show"))
-    modal.classList.add("modal-hide");
-    setTimeout(() => {
-      document.body.style.overflow = "initial";
-      modal.classList.remove("modal-show", "modal-hide");
-      modal.style.display = "none";      
-    }, 200);
-  }
-  else {
-    document.body.style.overflow = "hidden";
-    modal.style.display = "flex";
-    modal.classList.add("modal-show");
-  }
+const addHiddenClass = function () {
+    modalWindow.classList.add('hidden')
+    modalOverlay.classList.add('hidden')
+    document.body.classList.remove('fixedPos')
 }
+
+const removeHiddenClass = function () {
+    modalWindow.classList.remove('hidden')
+    modalOverlay.classList.remove('hidden')
+    document.body.classList.add('fixedPos')
+}
+
+for (let i = 0; i < showModalWindow.length; i++) {
+    showModalWindow[i].addEventListener('click', removeHiddenClass)
+}
+
+btnCloseModalWindow.addEventListener('click', addHiddenClass)
+modalOverlay.addEventListener('click', addHiddenClass)
+
+document.addEventListener('keydown', function (event){
+    if(event.key === 'Escape') {
+        if(!modalWindow.classList.contains('hidden')) {
+            addHiddenClass()
+        }
+    }
+})

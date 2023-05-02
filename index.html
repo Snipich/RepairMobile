@@ -2,484 +2,549 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <title>Ремонт телефоно Ростов-на-Дону</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="img/smartphone.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <title>Ремонт телефоно Ростов-на-Дону</title>
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
     <div class="modal-window hidden">
-        <button class="close-modal-window">&times;</button>
-        <h1 class="title">Модальное Окно</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vulputate
-            porta volutpat. Mauris tempor egestas fermentum. Donec et tortor in
-            felis pulvinar accumsan quis at massa. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Sed fermentum dui
-            sit amet lorem maximus, non feugiat eros semper. Vivamus eget dolor ut
-            libero pharetra ultricies ut elementum nisl. Mauris fringilla feugiat
-            ullamcorper. Nunc id tincidunt orci. Suspendisse eget sapien at turpis
-            rutrum semper sed id diam. Duis scelerisque ligula nisl, vitae viverra
-            nibh venenatis nec. Pellentesque nec nunc arcu. Integer mollis mi ut
-            risus posuere malesuada. Aliquam rhoncus ante vitae sem aliquet, vel
-            elementum ex vulputate. Nulla finibus commodo lacinia.
-        </p>
+      <button class="close-modal-window">&times;</button>
+      <h1 class="title">Модальное Окно</h1>
+      <form class="modalform" action="php/sendmail.php" method="post">
+        <label>
+          Укажите своё ФИО*
+          <input name="modalName" type="text" required>
+        </label>
+        <label>
+          Укажите свой E-mail*
+          <input name="modalEmail" type="email" required>
+        </label>
+        <label>
+          Укажите свой номер телефона*
+          <input name="modalPhone" type="text" required>
+        </label>
+        <label>
+          Укажите здесь свой вопрос
+          <textarea name="modalTextarea"></textarea>
+        </label>
+        <button type=" submit">Отправить</button>
+      </form>
     </div>
     <div class="overlay hidden"></div>
     <header>
-        <a href="index.html" class="header__logo">
-            <p>Логотип</p>
+      <a href="index.html" class="header__logo">
+        <p>Логотип</p>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a class="header__nav-item-link" href="#">Ссылка</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a class="header__nav-item-link" href="#">Ссылка</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a class="header__nav-item-link" href="#">Ссылка</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a class="header__nav-item-link" href="#">Ссылка</a>
+          </li>
+        </ul>
+        <a href="tel: 700000000" class="header__phone">
+          <p>+7 000 000-00-00</p>
         </a>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-list-item">
-                    <a class="header__nav-item-link" href="#">Ссылка</a>
-                </li>
-                <li class="header__nav-list-item">
-                    <a class="header__nav-item-link" href="#">Ссылка</a>
-                </li>
-                <li class="header__nav-list-item">
-                    <a class="header__nav-item-link" href="#">Ссылка</a>
-                </li>
-                <li class="header__nav-list-item">
-                    <a class="header__nav-item-link" href="#">Ссылка</a>
-                </li>
-            </ul>
-            <a href="tel: 700000000" class="header__phone">
-                <p>+7 000 000-00-00</p>
-            </a>
-        </nav>
+      </nav>
     </header>
     <main>
-        <div class="main__content">
-            <h1>Мы чиним любые
-                телефоны</h1>
-            <p>Починим Ваш телефон в Ростове-на-Дону</p>
-            <button class="show-modal-window">Позвонить нам</button>
-        </div>
-        <div class="main__image">
-            <img src="./img/MainPic.png" alt="Img Main">
-        </div>
+      <div class="main__content">
+        <h1>Мы чиним любые
+          телефоны</h1>
+        <p>Починим Ваш телефон в Ростове-на-Дону</p>
+        <button class="show-modal-window">Свяжитесь с нами</button>
+      </div>
+      <div class="main__image">
+        <img src="./img/MainPic.png" alt="Img Main">
+      </div>
     </main>
     <section class="chooses">
-        <h2>Нас выбирают</h2>
-        <div class="chooses__wrap">
-            <div class="chooses__card">
-                <div class="chooses__card-top">
-                    <img src="./img/choose/img-1.png" alt="Image Card Choose">
-                </div>
-                <div class="chooses__card-bottom">
-                    <p class="chooses__card-bottom-title">Качество и скорость работы</p>
-                    <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
-                </div>
-            </div>
-            <div class="chooses__card">
-                <div class="chooses__card-top">
-                    <img src="./img/choose/img-3.png" alt="Image Card Choose">
-                </div>
-                <div class="chooses__card-bottom">
-                    <p class="chooses__card-bottom-title">Доступная стоимость работы</p>
-                    <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
-                </div>
-            </div>
-            <div class="chooses__card">
-                <div class="chooses__card-top">
-                    <img src="./img/choose/img-2.png" alt="Image Card Choose">
-                </div>
-                <div class="chooses__card-bottom">
-                    <p class="chooses__card-bottom-title">Гарантия от 3-х месяцев</p>
-                    <p class="chooses__card-bottom-desc">Для клиентов мы предоствляем
-                        гарантию на работу </p>
-                </div>
-            </div>
+      <h2>Нас выбирают</h2>
+      <div class="chooses__wrap">
+        <div class="chooses__card">
+          <div class="chooses__card-top">
+            <img src="./img/choose/img-1.png" alt="Image Card Choose">
+          </div>
+          <div class="chooses__card-bottom">
+            <p class="chooses__card-bottom-title">Качество и скорость работы</p>
+            <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+          </div>
         </div>
+        <div class="chooses__card">
+          <div class="chooses__card-top">
+            <img src="./img/choose/img-3.png" alt="Image Card Choose">
+          </div>
+          <div class="chooses__card-bottom">
+            <p class="chooses__card-bottom-title">Доступная стоимость работы</p>
+            <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+          </div>
+        </div>
+        <div class="chooses__card">
+          <div class="chooses__card-top">
+            <img src="./img/choose/img-2.png" alt="Image Card Choose">
+          </div>
+          <div class="chooses__card-bottom">
+            <p class="chooses__card-bottom-title">Гарантия от 3-х месяцев</p>
+            <p class="chooses__card-bottom-desc">Для клиентов мы предоствляем
+              гарантию на работу </p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="type__fix">
-        <h2>Ремонтируем поломки</h2>
-        <div class="type__fix-wrap">
-            <div class="type__fix-card-1 type__fix-card">
-                <p class="type__fix-card-title">Дисплей и стекло</p>
-                <div class="type__fix-card-content">
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Не работает экран</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Треснуло стекло</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не работает сенсор
-                                или тачскрин</p>
-                        </li>
-                    </ul>
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Нет подсветки экрана</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не работает часть экрана</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Появились полосы</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="type__fix-card-2 type__fix-card">
-                <p class="type__fix-card-title">Зарядка и батарея</p>
-                <div class="type__fix-card-content">
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Быстро разряжается</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Вздулся аккумулятор</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не заряжается</p>
-                        </li>
-                    </ul>
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Плохой контакт зарядки</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Греется во время
-                                зарядки</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="type__fix-card-3 type__fix-card">
-                <p class="type__fix-card-title">Звук и динамики</p>
-                <div class="type__fix-card-content">
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Динамик хрипит</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Динамик не работает</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Динамик тихо работает</p>
-                        </li>
-                    </ul>
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Не работают наушники</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не работает вибро</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="type__fix-card-4 type__fix-card">
-                <p class="type__fix-card-title">Камеры</p>
-                <div class="type__fix-card-content">
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Не фокусирует передняя</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не фокусирует задняя</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не работает фронтальная</p>
-                        </li>
-                    </ul>
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Не работает задняя</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не работает вспышка</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Треснуло стекло камеры</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="type__fix-card-5 type__fix-card">
-                <p class="type__fix-card-title">Кнопки</p>
-                <div class="type__fix-card-content">
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Не работают кнопки</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Ремонт кнопки громкости</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Ремонт кнопки home</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Ремонт кнопки home</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="type__fix-card-6 type__fix-card">
-                <p class="type__fix-card-title">Разговор и микрофон</p>
-                <div class="type__fix-card-content">
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Я не слышу собеседника</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Плохо слышно абонента</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не гаснет при разговоре</p>
-                        </li>
-                    </ul>
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Собеседник не слышит</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Собеседник плохо слышит</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="type__fix-card-7 type__fix-card">
-                <p class="type__fix-card-title">Связь, сеть и WI-FI</p>
-                <div class="type__fix-card-content">
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Не видит SIM карту</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не видит сеть</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Сеть ловит плохо</p>
-                        </li>
-                    </ul>
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Не работает 3G/4G</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не работает Wi-Fi</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="type__fix-card-8 type__fix-card">
-                <p class="type__fix-card-title">Общие проблемы</p>
-                <div class="type__fix-card-content">
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Сильно греется</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Глючит или тормозит</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Разблокировка</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Зависает</p>
-                        </li>
-                    </ul>
-                    <ul class="type__fix-card-list">
-                        <li class="type__fix-card-item">
-                            <p>Не включается</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Не видит карту памяти</p>
-                        </li>
-                        <li class="type__fix-card-item">
-                            <p>Попала вода</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <h2>Ремонтируем поломки</h2>
+      <div class="type__fix-wrap">
+        <div class="type__fix-card-1 type__fix-card">
+          <p class="type__fix-card-title">Дисплей и стекло</p>
+          <div class="type__fix-card-content">
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Не работает экран</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Треснуло стекло</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не работает сенсор
+                  или тачскрин</p>
+              </li>
+            </ul>
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Нет подсветки экрана</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не работает часть экрана</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Появились полосы</p>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="type__fix-card-2 type__fix-card">
+          <p class="type__fix-card-title">Зарядка и батарея</p>
+          <div class="type__fix-card-content">
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Быстро разряжается</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Вздулся аккумулятор</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не заряжается</p>
+              </li>
+            </ul>
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Плохой контакт зарядки</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Греется во время
+                  зарядки</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="type__fix-card-3 type__fix-card">
+          <p class="type__fix-card-title">Звук и динамики</p>
+          <div class="type__fix-card-content">
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Динамик хрипит</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Динамик не работает</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Динамик тихо работает</p>
+              </li>
+            </ul>
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Не работают наушники</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не работает вибро</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="type__fix-card-4 type__fix-card">
+          <p class="type__fix-card-title">Камеры</p>
+          <div class="type__fix-card-content">
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Не фокусирует передняя</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не фокусирует задняя</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не работает фронтальная</p>
+              </li>
+            </ul>
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Не работает задняя</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не работает вспышка</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Треснуло стекло камеры</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="type__fix-card-5 type__fix-card">
+          <p class="type__fix-card-title">Кнопки</p>
+          <div class="type__fix-card-content">
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Не работают кнопки</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Ремонт кнопки громкости</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Ремонт кнопки home</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Ремонт кнопки home</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="type__fix-card-6 type__fix-card">
+          <p class="type__fix-card-title">Разговор и микрофон</p>
+          <div class="type__fix-card-content">
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Я не слышу собеседника</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Плохо слышно абонента</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не гаснет при разговоре</p>
+              </li>
+            </ul>
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Собеседник не слышит</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Собеседник плохо слышит</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="type__fix-card-7 type__fix-card">
+          <p class="type__fix-card-title">Связь, сеть и WI-FI</p>
+          <div class="type__fix-card-content">
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Не видит SIM карту</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не видит сеть</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Сеть ловит плохо</p>
+              </li>
+            </ul>
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Не работает 3G/4G</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не работает Wi-Fi</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="type__fix-card-8 type__fix-card">
+          <p class="type__fix-card-title">Общие проблемы</p>
+          <div class="type__fix-card-content">
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Сильно греется</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Глючит или тормозит</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Разблокировка</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Зависает</p>
+              </li>
+            </ul>
+            <ul class="type__fix-card-list">
+              <li class="type__fix-card-item">
+                <p>Не включается</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Не видит карту памяти</p>
+              </li>
+              <li class="type__fix-card-item">
+                <p>Попала вода</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="repair__brand">
-        <h3>ремонтируем бренды</h3>
-        <div>
-            <img src="./img/images-brand.png" alt="Image Brand">
-        </div>
+      <h3>ремонтируем бренды</h3>
+      <div>
+        <img src="./img/images-brand.png" alt="Image Brand">
+      </div>
     </section>
     <section class="slide">
-        <h4>Реальные отзывы</h4>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="swiper-slide-top">
-                        <img src="./img/slider/chat.png" alt="Slider Star">
-                        <p>Роман</p>
-                    </div>
-                    <div class="swiper-slide-center">
-                        <p>Договор: <span>345645</span></p>
-                        <p>Дата: <span>21.03.2023</span></p>
-                        <img src="./img/slider/stars.png" alt="Slider Star">
-                    </div>
-                    <div class="swiper-slide-bottom">
-                        <p>Отличная компания! После моего первого звонка, через
-                            сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
-                            Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
-                            за быструю и качественную работу.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-slide-top">
-                        <img src="./img/slider/chat.png" alt="Slider Star">
-                        <p>Роман</p>
-                    </div>
-                    <div class="swiper-slide-center">
-                        <p>Договор: <span>345645</span></p>
-                        <p>Дата: <span>21.03.2023</span></p>
-                        <img src="./img/slider/stars.png" alt="Slider Star">
-                    </div>
-                    <div class="swiper-slide-bottom">
-                        <p>Отличная компания! После моего первого звонка, через
-                            сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
-                            Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
-                            за быструю и качественную работу.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-slide-top">
-                        <img src="./img/slider/chat.png" alt="Slider Star">
-                        <p>Роман</p>
-                    </div>
-                    <div class="swiper-slide-center">
-                        <p>Договор: <span>345645</span></p>
-                        <p>Дата: <span>21.03.2023</span></p>
-                        <img src="./img/slider/stars.png" alt="Slider Star">
-                    </div>
-                    <div class="swiper-slide-bottom">
-                        <p>Отличная компания! После моего первого звонка, через
-                            сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
-                            Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
-                            за быструю и качественную работу.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-slide-top">
-                        <img src="./img/slider/chat.png" alt="Slider Star">
-                        <p>Роман</p>
-                    </div>
-                    <div class="swiper-slide-center">
-                        <p>Договор: <span>345645</span></p>
-                        <p>Дата: <span>21.03.2023</span></p>
-                        <img src="./img/slider/stars.png" alt="Slider Star">
-                    </div>
-                    <div class="swiper-slide-bottom">
-                        <p>Отличная компания! После моего первого звонка, через
-                            сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
-                            Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
-                            за быструю и качественную работу.</p>
-                    </div>
-                </div>
+      <h4>Реальные отзывы</h4>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-slide-top">
+              <img src="./img/slider/chat.png" alt="Slider Star">
+              <p>Роман</p>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-center">
+              <p>Договор: <span>345645</span></p>
+              <p>Дата: <span>21.03.2023</span></p>
+              <img src="./img/slider/stars.png" alt="Slider Star">
+            </div>
+            <div class="swiper-slide-bottom">
+              <p>Отличная компания! После моего первого звонка, через
+                сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
+                Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
+                за быструю и качественную работу.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-top">
+              <img src="./img/slider/chat.png" alt="Slider Star">
+              <p>Роман</p>
+            </div>
+            <div class="swiper-slide-center">
+              <p>Договор: <span>345645</span></p>
+              <p>Дата: <span>21.03.2023</span></p>
+              <img src="./img/slider/stars.png" alt="Slider Star">
+            </div>
+            <div class="swiper-slide-bottom">
+              <p>Отличная компания! После моего первого звонка, через
+                сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
+                Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
+                за быструю и качественную работу.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-top">
+              <img src="./img/slider/chat.png" alt="Slider Star">
+              <p>Роман</p>
+            </div>
+            <div class="swiper-slide-center">
+              <p>Договор: <span>345645</span></p>
+              <p>Дата: <span>21.03.2023</span></p>
+              <img src="./img/slider/stars.png" alt="Slider Star">
+            </div>
+            <div class="swiper-slide-bottom">
+              <p>Отличная компания! После моего первого звонка, через
+                сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
+                Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
+                за быструю и качественную работу.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-top">
+              <img src="./img/slider/chat.png" alt="Slider Star">
+              <p>Роман</p>
+            </div>
+            <div class="swiper-slide-center">
+              <p>Договор: <span>345645</span></p>
+              <p>Дата: <span>21.03.2023</span></p>
+              <img src="./img/slider/stars.png" alt="Slider Star">
+            </div>
+            <div class="swiper-slide-bottom">
+              <p>Отличная компания! После моего первого звонка, через
+                сутки, у меня уже висел отремонтированный тв. Сами забирали, сами привезли, бесплатно.
+                Сейчас очень тяжело найти добросовестную компанию. Молодцы!! Удачи и развития!! И спасибо,
+                за быструю и качественную работу.</p>
+            </div>
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
     <section>
-        <h5>Актуальные акции</h5>
+      <h5>Актуальные акции</h5>
+      <div>
+        <img src="./img/images-repair.png" alt="Repair banner">
+      </div>
+    </section>
+    <section>
+      <h6>Как мы работаем</h6>
+      <div class="working__wrap">
+        <div class="working__card">
+          <div class="working__card-top">
+            <p class="working__card-top-num">1</p>
+            <p class="working__card-top-text">Звонок</p>
+          </div>
+          <div class="working__card-bottom">
+            <p class="chooses__card-bottom-desc">Звоните по телефону и оставляете заявку
+              на ремонт техники</p>
+          </div>
+        </div>
+        <div class="working__card">
+          <div class="working__card-top">
+            <p class="working__card-top-num">2</p>
+            <p class="working__card-top-text">Доставка</p>
+          </div>
+          <div class="working__card-bottom">
+            <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+          </div>
+        </div>
+        <div class="working__card">
+          <div class="working__card-top">
+            <p class="working__card-top-num">3</p>
+            <p class="working__card-top-text">Диагностика</p>
+          </div>
+          <div class="working__card-bottom">
+            <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+          </div>
+        </div>
+      </div>
+      <div class="working__wrap">
+        <div class="working__card-bot">
+          <div class="working__card-bot-top">
+            <p class="working__card-top-num">4</p>
+            <p class="working__card-top-text">Согласовывание</p>
+          </div>
+          <div class="working__card-bottom-bot">
+            <p class="working__card-bot-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30
+              минут</p>
+          </div>
+        </div>
+        <div class="working__card-bot">
+          <div class="working__card-bot-top">
+            <p class="working__card-top-num">5</p>
+            <p class="working__card-top-text">Все уже готово</p>
+          </div>
+          <div class="working__card-bottom-bot">
+            <p class="working__card-bot-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30
+              минут</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h6>Наш сервисный центр</h6>
+      <div>
         <div>
-            <img src="./img/images-repair.png" alt="Repair banner">
+          <img class="serivceImg" src="img/irl-image.png" alt="Photo">
         </div>
+      </div>
     </section>
     <section>
-        <h6>Text</h6>
-        <div class="working__wrap">
-            <div class="working__card">
-                <div class="working__card-top">
-                    <p class="working__card-top-num">1</p>
-                    <p class="working__card-top-text">Звонок</p>
-                </div>
-                <div class="working__card-bottom">
-                    <p class="chooses__card-bottom-desc">Звоните по телефону и оставляете заявку
-                        на ремонт техники</p>
-                </div>
-            </div>
-            <div class="working__card">
-                <div class="working__card-top">
-                    <p class="working__card-top-num">2</p>
-                    <p class="working__card-top-text">Доставка</p>
-                </div>
-                <div class="working__card-bottom">
-                    <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
-                </div>
-            </div>
-            <div class="working__card">
-                <div class="working__card-top">
-                    <p class="working__card-top-num">3</p>
-                    <p class="working__card-top-text">Диагностика</p>
-                </div>
-                <div class="working__card-bottom">
-                    <p class="chooses__card-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
-                </div>
-            </div>
+      <h6>Наши контакты</h6>
+      <div class="contact">
+        <div class="contact-info">
+          <div class="contact-info-block">
+            <p class="contact-box-title">Телефон:</p>
+            <p class="contact-box-info">+7(000)000-00-00</p>
+            <button class="contact-box-link" href="#">Оставить заявку</button>
+          </div>
+          <div class="contact-info-block">
+            <p class="contact-box-title">Адрес:</p>
+            <p class="contact-box-info">Название</p>
+            <p class="contact-box-info">Название</p>
+          </div>
+          <div class="contact-info-block">
+            <p class="contact-box-title">Часы работы:</p>
+            <p class="contact-box-info">Пн-Пт: с 10 до 21</p>
+            <p class="contact-box-info">Сб-Вс: с 11 до 20</p>
+          </div>
         </div>
-        <div class="working__wrap">
-            <div class="working__card-bot">
-                <div class="working__card-bot-top">
-                    <p class="working__card-top-num">4</p>
-                    <p class="working__card-top-text">Согласовывание</p>
-                </div>
-                <div class="working__card-bottom-bot">
-                    <p class="working__card-bot-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30
-                        минут</p>
-                </div>
-            </div>
-            <div class="working__card-bot">
-                <div class="working__card-bot-top">
-                    <p class="working__card-top-num">5</p>
-                    <p class="working__card-top-text">Все уже готово</p>
-                </div>
-                <div class="working__card-bottom-bot">
-                    <p class="working__card-bot-bottom-desc">Время ремонта в нашем сервисном центре занимает от 30
-                        минут</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <h6>Text</h6>
         <div>
-            <div>
-                Image Card
-            </div>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f2b5c7a54757848ad8fae12d492e3d1ed8246e7df41ce5b443fa9eec89eaf4a&amp;source=constructor"
+            width="100%" height="400" frameborder="0"></iframe>
         </div>
-    </section>
-    <section>
-        <h6>Text</h6>
         <div>
-            <div>
-                info
-            </div>
-            <div>
-                Map
-            </div>
-            <div>
-                text
-            </div>
+          text
         </div>
+      </div>
     </section>
     <footer>
-        footer
+
+      <div class="footer-left">
+        <div class="footer-left-logo">
+          <p>Logo</p>
+          <p>Ремонт смартфонов</p>
+        </div>
+        <p>Приходите к нам</p>
+        <div class="footer-left-info">
+          <a href="#">+7 (000) 000-00-00</a>
+          <p>Пн-Пт: с 10 до 21, Сб-Вс: с 11 до 20</p>
+        </div>
+        <p class="footer-left-text">Спасибо, что выбрали нашу компанию для ремонта вашего телефона! Мы ценим ваше
+          доверие и готовы предложить вам
+          профессиональный и качественный сервис.
+
+          В случае, если вы столкнулись с проблемой в работе вашего телефона, не отчаивайтесь! Наша команда опытных
+          специалистов готова оказать помощь и решить любую проблему. Мы занимаемся ремонтом телефонов всех моделей и
+          брендов, и гарантируем быструю и эффективную работу.</p>
+      </div>
+
+      <div class="footer-right">
+        <p>Ремонт брендов</p>
+        <div class="footer-right-lists">
+          <div>
+            <ul class="footer-right-list">
+              <p>Xiaomi</p>
+              <p>Apple</p>
+              <p>Huawei</p>
+              <p>Honor</p>
+              <p>Meizu</p>
+            </ul>
+          </div>
+          <div>
+            <ul class="footer-right-list">
+              <p>Samsung</p>
+              <p>Nokia</p>
+              <p>Lenovo</p>
+              <p>Sony</p>
+              <p>Asus</p>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
-</div>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="./js/slider.js"></script>
-<script src="./js/modal.js"></script>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>

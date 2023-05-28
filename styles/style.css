@@ -664,6 +664,10 @@ h6, h5, h2 {
     resize: none;
 }
 
+#checkbox {
+  margin-top: 30px;
+}
+
 .modalform > button {
     margin-top: 33px;
     background: #FF005C;

@@ -37,6 +37,11 @@
           Укажите здесь свой вопрос
           <textarea name="modalTextarea"></textarea>
         </label>
+        <div>
+          <input type="checkbox" id="checkbox" onchange="toggleSubmitButton()" required>
+          <a href="files/Политика.pdf" download>Отправляю форму, вы соглашаетесь с политикой обратки информации на
+            сайте</a>
+        </div>
         <button type=" submit">Отправить</button>
       </form>
     </div>
@@ -48,16 +53,16 @@
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-list-item">
-            <a class="header__nav-item-link" href="#">Ссылка</a>
+            <a class="header__nav-item-link" href="#category">Категории ремонта</a>
           </li>
           <li class="header__nav-list-item">
-            <a class="header__nav-item-link" href="#">Ссылка</a>
+            <a class="header__nav-item-link" href="#feedback">Отзывы</a>
           </li>
           <li class="header__nav-list-item">
-            <a class="header__nav-item-link" href="#">Ссылка</a>
+            <a class="header__nav-item-link" href="#sales">Акции</a>
           </li>
           <li class="header__nav-list-item">
-            <a class="header__nav-item-link" href="#">Ссылка</a>
+            <a class="header__nav-item-link" href="#contacts">Контакты</a>
           </li>
         </ul>
         <a href="tel: 700000000" class="header__phone">
@@ -109,7 +114,7 @@
         </div>
       </div>
     </section>
-    <section class="type__fix">
+    <section class="type__fix" id="category">
       <h2>Ремонтируем поломки</h2>
       <div class="type__fix-wrap">
         <div class="type__fix-card-1 type__fix-card">
@@ -321,7 +326,7 @@
         <img src="./img/images-brand.png" alt="Image Brand">
       </div>
     </section>
-    <section class="slide">
+    <section class="slide" id="feedback">
       <h4>Реальные отзывы</h4>
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -397,7 +402,7 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
-    <section class="sale">
+    <section class="sale" id="sales">
       <h5>Актуальные акции</h5>
       <div>
         <img src="./img/images-repair.png" alt="Repair banner">
@@ -466,7 +471,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="contacts">
       <h6>Наши контакты</h6>
       <div class="contact">
         <div class="contact-info">
